@@ -31,7 +31,9 @@
   nav .lang button.on{background:var(--gold-deep);border-color:var(--gold-deep)}
   header.toprule{border-top:6px solid var(--gold)}
   .eyebrow{text-align:center;margin:60px 0 12px;font-size:.85rem;letter-spacing:.35em;color:var(--gold-deep)}
-  .hero{text-align:center;padding:14px 0 10px}
+  .hero{text-align:center;padding:14px 0 10px}  .card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border:1px solid rgba(184,145,47,.5);display:block;margin-bottom:12px;background:#fff}
+  .monogram{width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;background:var(--parchment-deep);border:1px solid var(--gold);margin-bottom:12px}
+  .monogram span{font-size:3rem;color:var(--gold-deep);border:2px solid var(--gold);border-radius:50%;width:110px;height:110px;display:flex;align-items:center;justify-content:center}
   .hero h1{font-size:clamp(1.8rem,6vw,2.8rem);font-weight:400;margin-bottom:16px;line-height:1.5}
   .hero .sub{color:var(--ink-soft);max-width:64ch;margin:0 auto 8px;font-size:clamp(1rem,2.6vw,1.15rem)}
   .goldrule{width:120px;height:2px;background:var(--gold);margin:32px auto}
@@ -53,7 +55,8 @@
   .person h3{font-size:1.05rem;font-weight:400;margin:12px 0 2px}
   .person .en{font-size:.78rem;color:var(--gold-deep);letter-spacing:.06em;margin-bottom:8px}
   .person p{font-size:.86rem;color:var(--ink-soft);text-align:left}
-  .nine{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:28px}
+  .nine{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;mar
+    gin-top:28px}
   .card{background:var(--card);border:1px solid rgba(184,145,47,.55);padding:20px 22px}
   .card h3{font-size:1.02rem;font-weight:400}
   .card .meta{font-size:.78rem;color:var(--gold-deep);letter-spacing:.05em;margin:4px 0 8px}
@@ -157,50 +160,51 @@
     <h2>十三位關懷先賢名錄</h2>
     <p class="lede">從十九世紀到二十世紀中葉，他們從 New England、紐約上州、新澤西出發，把一生獻給了中國。</p>
     <div class="nine">
+      
       <div class="card">
-        <h3>衛三畏</h3>
+        <img src="images/williams.jpg" alt="衛三畏肖像"><h3>衛三畏</h3>
         <p class="meta">Samuel Wells Williams · 1812–1884 · 紐約 Utica</p>
         <p>著《中國總論》《漢英韻府》，定義一代西方人對中國的認識；1877 年成為耶魯首任中文教授——美國第一個漢學講席。</p>
       </div>
       <div class="card">
-        <h3>倪維思</h3>
+        <img src="images/nevius.jpg" alt="倪維思肖像"><h3>倪維思</h3>
         <p class="meta">John Livingston Nevius · 1829–1893 · 紐約上州</p>
         <p>在山東提出「三自」教會方法——自傳、自養、自立；這套在中國孕育的方法，在韓國結出最豐碩的果實。</p>
       </div>
       <div class="card">
-        <h3>菲爾德</h3>
+        <img src="images/fielde.jpg" alt="菲爾德肖像"><h3>菲爾德</h3>
         <p class="meta">Adele Marion Fielde · 1839–1916 · 紐約 East Rodman</p>
         <p>在汕頭開辦聖經婦女學校、編纂潮州話詞典、倡導廢除纏足；返美後成為美國婦女參政運動領袖。</p>
       </div>
       <div class="card">
-        <h3>明恩溥</h3>
+        <img src="images/smith.jpg" alt="明恩溥肖像"><h3>明恩溥</h3>
         <p class="meta">Arthur Henderson Smith · 1845–1932 · 康州 Vernon</p>
         <p>《中國人的性格》作者；在華 54 年，曾說服羅斯福總統退還部分庚子賠款，催生庚款獎學金與清華大學。</p>
       </div>
       <div class="card">
-        <h3>瑪高溫</h3>
+        <div class="monogram"><span>瑪</span></div><h3>瑪高溫</h3>
         <p class="meta">Daniel Jerome MacGowan · 1815–1893 · 羅德島 Pawtucket</p>
-        <p>最早的美國浸信會醫療宣教士之一，1841 年起在寧波、上海行醫傳道；晚年重返中國，卒於上海。</p>
+        <p>最早的美國浸信會醫療宣教士之一，1841 年起在寧波、上海行醫傳道；晚年重返中國，卒於上海。（肖像未尋獲，以名章代之）</p>
       </div>
       <div class="card">
-        <h3>雅裨理</h3>
+        <img src="images/abeel.jpg" alt="雅裨理肖像"><h3>雅裨理</h3>
         <p class="meta">David Abeel · 1804–1846 · 新澤西 New Brunswick</p>
         <p>1842 年在廈門開創歸正會宣教站；在廈門助徐繼畲編成《瀛寰志略》——十九世紀中國最有影響力的世界地理著作。</p>
       </div>
       <div class="card">
-        <h3>步惠廉</h3>
+        <img src="images/baldwin.jpg" alt="步惠廉肖像"><h3>步惠廉</h3>
         <p class="meta">Stephen Livingston Baldwin · 1835–1902 · 新澤西 Somerville</p>
         <p>福州宣教士；1868 年把宗派刊物改造為跨宗派《教務雜誌》（Chinese Recorder），成為研究在華宣教最重要的文獻。</p>
       </div>
       <div class="card">
-        <h3>波乃耶</h3>
+        <img src="images/ball.jpg" alt="波乃耶肖像"><h3>波乃耶</h3>
         <p class="meta">Dyer Ball · 1796–1866 · 麻州 West Boylston</p>
         <p>1838 年受美部會差派，足跡遍及新加坡、澳門、香港、廣州，在華南服事近三十年。</p>
       </div>
       <div class="card">
-        <h3>盧公明</h3>
+        <div class="monogram"><span>盧</span></div><h3>盧公明</h3>
         <p class="meta">Justus Doolittle · 1824–1880 · 紐約 Rutland</p>
-        <p>福州宣教士；《中國社會生活》作者，以細膩筆觸記錄十九世紀中國民間社會，傳世至今。</p>
+        <p>福州宣教士；《中國社會生活》作者，以細膩筆觸記錄十九世紀中國民間社會，傳世至今。（肖像未尋獲，以名章代之）</p>
       </div>
     </div>
     <p class="lede" style="margin-top:26px">他們把福音帶到中華大地；<br>今天，輪到我們把關懷傳下去。</p>
