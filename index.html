@@ -73,11 +73,7 @@
   .verse .ref{display:block;margin-top:10px;font-style:normal;letter-spacing:.15em;font-size:.85rem;color:var(--gold-deep)}
   footer{border-top:1px solid rgba(184,145,47,.45);padding:26px 0 46px;text-align:center;
     font-size:.82rem;color:var(--ink-soft)}
-  footer a{color:var(--gold-deep)}
-  #entoast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);
-    color:#f4ecd8;padding:12px 26px;font-size:.9rem;letter-spacing:.06em;display:none;z-index:99;
-    border:1px solid var(--gold)}
-  @media (max-width:640px){ section{padding:30px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
+  footer a{color:var(--gold-deep)}  @media (max-width:640px){ section{padding:30px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
 </style>
 </head>
 <body>
@@ -91,10 +87,9 @@
     <a class="nl" href="#blueprint">建堂藍圖</a>
     <a class="nl" href="https://www.youtube.com/@abrahamchan649" target="_blank" rel="noopener">Abe 詩歌↗</a>
     <a class="nl cta" href="#sponsor">成為贊助者</a>
-    <span class="lang"><button class="on">中文</button><button onclick="enSoon()">EN</button></span>
+    <span class="lang"><button class="on">中文</button><button onclick="location.href='en/'">EN</button></span>
   </div>
 </nav>
-<div id="entoast">英文版即將推出 · English version coming soon</div>
 
 <header class="toprule" id="home"></header>
 <div class="wrap">
@@ -178,12 +173,5 @@
   </div>
 </footer>
 
-<script>
-function enSoon(){
-  var t=document.getElementById('entoast');
-  t.style.display='block';
-  setTimeout(function(){t.style.display='none';},2600);
-}
-</script>
 </body>
 </html>
