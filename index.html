@@ -6,101 +6,113 @@
 <title>人人都是關懷者｜贊助一位學員的同行旅程</title>
 <style>
   :root{
-    --parchment:#f4ecd8;
-    --parchment-deep:#eaddc2;
-    --ink:#2b2416;
-    --ink-soft:#4a4030;
-    --gold:#b8912f;
-    --gold-deep:#8f6f1f;
-    --card:#faf5e6;
+    --parchment:#f4ecd8; --parchment-deep:#eaddc2;
+    --ink:#2b2416; --ink-soft:#4a4030;
+    --gold:#b8912f; --gold-deep:#8f6f1f; --card:#faf5e6;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
   body{
     font-family:'Songti TC','PMingLiU','SimSun',Georgia,serif;
     background:var(--parchment);
     background-image:radial-gradient(ellipse at 20% 10%, rgba(184,145,47,.06), transparent 50%),
                      radial-gradient(ellipse at 85% 90%, rgba(120,90,30,.07), transparent 55%);
-    color:var(--ink);
-    line-height:1.9;
-    -webkit-text-size-adjust:100%;
+    color:var(--ink); line-height:1.9; -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(43,36,22,.96);color:#f4ecd8;
+    border-bottom:3px solid var(--gold);
+  }
+  nav .navwrap{max-width:1060px;margin:0 auto;padding:0 16px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;}
+  nav a.nl{color:#f4ecd8;text-decoration:none;font-size:.82rem;letter-spacing:.08em;
+    padding:13px 10px;white-space:nowrap;}
+  nav a.nl:hover{color:var(--gold)}
+  nav .cta{background:var(--gold-deep);color:#fff8e8 !important;padding:8px 18px !important;
+    margin:6px 4px;letter-spacing:.12em;}
+  nav .cta:hover{background:var(--gold)}
+  nav .lang{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.8rem;color:#cbbf9f}
+  nav .lang button{background:none;border:1px solid #8a7a55;color:#f4ecd8;font-size:.78rem;
+    padding:4px 10px;cursor:pointer;font-family:inherit;letter-spacing:.08em}
+  nav .lang button.on{background:var(--gold-deep);border-color:var(--gold-deep)}
   header.toprule{border-top:6px solid var(--gold)}
-  .eyebrow{
-    text-align:center;margin:56px 0 10px;font-size:.85rem;letter-spacing:.35em;
-    color:var(--gold-deep);
-  }
-  .hero{text-align:center;padding:18px 0 20px}
-  .hero h1{
-    font-size:clamp(1.9rem,6vw,2.9rem);line-height:1.4;font-weight:400;margin-bottom:18px;
-  }
-  .hero .sub{
-    font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink-soft);
-    max-width:60ch;margin:0 auto 8px;
-  }
+  .eyebrow{text-align:center;margin:64px 0 12px;font-size:.85rem;letter-spacing:.35em;color:var(--gold-deep)}
+  .hero{text-align:center;padding:16px 0 26px}
+  .hero h1{font-size:clamp(1.7rem,5.5vw,2.7rem);line-height:1.5;font-weight:400;margin-bottom:20px}
+  .hero .sub{font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink-soft);max-width:62ch;margin:0 auto 10px}
   .goldrule{width:120px;height:2px;background:var(--gold);margin:34px auto}
-  section{padding:36px 0}
-  section h2{
-    font-size:clamp(1.4rem,4vw,1.9rem);font-weight:400;text-align:center;margin-bottom:20px;
-  }
-  section p.lede{text-align:center;color:var(--ink-soft);max-width:62ch;margin:0 auto 1em}
-  /* ---------- TIERS ---------- */
+  section{padding:40px 0}
+  section h2{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:400;text-align:center;margin-bottom:18px}
+  section p.lede{text-align:center;color:var(--ink-soft);max-width:64ch;margin:0 auto 1em}
+  .btn{display:inline-block;background:var(--gold-deep);color:#fff8e8;text-decoration:none;
+    letter-spacing:.12em;font-size:1rem;padding:15px 44px;margin-top:20px;transition:background .2s}
+  .btn:hover{background:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--gold-deep);border:1px solid var(--gold-deep)}
+  .btn.ghost:hover{background:var(--gold-deep);color:#fff8e8}
   .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:30px}
-  .tier{
-    background:var(--card);border:1px solid var(--gold);
-    box-shadow:0 8px 22px rgba(60,45,15,.15);
-    padding:30px 22px;text-align:center;display:flex;flex-direction:column;
-  }
+  .tier{background:var(--card);border:1px solid var(--gold);box-shadow:0 8px 22px rgba(60,45,15,.15);
+    padding:30px 22px;text-align:center;display:flex;flex-direction:column}
   .tier.featured{border-width:2px;background:#fffdf4}
   .tier .amt{font-size:2rem;color:var(--gold-deep);margin:6px 0 4px;letter-spacing:.04em}
   .tier h3{font-size:1.1rem;font-weight:400;margin-bottom:8px}
   .tier p{font-size:.92rem;color:var(--ink-soft);flex:1}
-  .tier .tag{
-    display:inline-block;font-size:.75rem;letter-spacing:.25em;color:var(--gold-deep);
-    border:1px solid var(--gold);padding:4px 12px;margin-bottom:12px;
-  }
-  .total{
-    text-align:center;margin-top:34px;padding:26px;background:var(--parchment-deep);
-    border:1px solid rgba(184,145,47,.45);
-  }
+  .tier .tag{display:inline-block;font-size:.75rem;letter-spacing:.25em;color:var(--gold-deep);
+    border:1px solid var(--gold);padding:4px 12px;margin-bottom:12px}
+  .total{text-align:center;margin-top:34px;padding:26px;background:var(--parchment-deep);
+    border:1px solid rgba(184,145,47,.45)}
   .total strong{font-size:1.6rem;color:var(--gold-deep);letter-spacing:.05em}
-  /* ---------- FORM ---------- */
   .formwrap{background:var(--card);border:1px solid var(--gold);padding:12px;margin-top:24px}
   .formwrap iframe{width:100%;min-height:900px;border:0;display:block;background:#fff}
-  .verse{
-    text-align:center;font-style:italic;color:var(--ink-soft);
-    max-width:56ch;margin:0 auto;
-  }
+  .blueprint{background:var(--parchment-deep);border-top:1px solid rgba(184,145,47,.45);
+    border-bottom:1px solid rgba(184,145,47,.45)}
+  .blueprint .ph{border:2px dashed var(--gold);padding:54px 20px;text-align:center;color:var(--ink-soft);
+    margin:26px 0;font-size:.95rem;letter-spacing:.06em}
+  ul.facts{max-width:60ch;margin:18px auto;color:var(--ink-soft);list-style:none}
+  ul.facts li{padding:8px 0 8px 1.6em;position:relative}
+  ul.facts li::before{content:"\25C6";position:absolute;left:0;color:var(--gold);font-size:.7em;top:1.1em}
+  .verse{text-align:center;font-style:italic;color:var(--ink-soft);max-width:58ch;margin:0 auto}
   .verse .ref{display:block;margin-top:10px;font-style:normal;letter-spacing:.15em;font-size:.85rem;color:var(--gold-deep)}
-  footer{
-    border-top:1px solid rgba(184,145,47,.45);
-    padding:26px 0 44px;text-align:center;font-size:.82rem;color:var(--ink-soft);
-  }
+  footer{border-top:1px solid rgba(184,145,47,.45);padding:26px 0 46px;text-align:center;
+    font-size:.82rem;color:var(--ink-soft)}
   footer a{color:var(--gold-deep)}
-  .btn{
-    display:inline-block;background:var(--gold-deep);color:#fff8e8;
-    text-decoration:none;letter-spacing:.1em;font-size:.95rem;padding:15px 38px;
-    margin-top:18px;transition:background .2s;
-  }
-  .btn:hover{background:var(--ink)}
-  @media (max-width:640px){ section{padding:28px 0} }
+  #entoast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);
+    color:#f4ecd8;padding:12px 26px;font-size:.9rem;letter-spacing:.06em;display:none;z-index:99;
+    border:1px solid var(--gold)}
+  @media (max-width:640px){ section{padding:30px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
 </style>
 </head>
 <body>
-<header class="toprule"></header>
 
+<nav>
+  <div class="navwrap">
+    <a class="nl" href="#home">首頁</a>
+    <a class="nl" href="http://soulcare.wordnspirit.com/" target="_blank" rel="noopener">課程說明</a>
+    <a class="nl" href="gallery.html">歷史長廊</a>
+    <a class="nl" href="https://glsna.org/en/" target="_blank" rel="noopener">基督燈台協會</a>
+    <a class="nl" href="#blueprint">建堂藍圖</a>
+    <a class="nl" href="https://youtube.com/@abepoimen" target="_blank" rel="noopener">Abe 詩歌</a>
+    <a class="nl cta" href="#sponsor">成為贊助者</a>
+    <span class="lang"><button class="on">中文</button><button onclick="enSoon()">EN</button></span>
+  </div>
+</nav>
+<div id="entoast">英文版即將推出 · English version coming soon</div>
+
+<header class="toprule" id="home"></header>
 <div class="wrap">
   <p class="eyebrow">人人都是關懷者 · 心靈關懷 Cohort II 2027–2028</p>
-
   <div class="hero">
-    <h1>邀請你，成為一位學員的同行者</h1>
-    <p class="sub">2027 年 1 月，25 位學習者將踏上一段 18 個月的心靈關懷 formation 旅程。<br>
+    <h1>先賢把福音帶到中華大地；<br>今天，輪到你把關懷傳下去。</h1>
+    <p class="sub">2027 年 1 月，25 位學習者將踏上一段 18 個月的心靈關懷塑造旅程。<br>
     他們需要裝備，而裝備需要有人同行——你的贊助，讓一位學員無後顧之憂地走完全程。</p>
+    <a class="btn" href="#sponsor">成為贊助者</a>
+    &nbsp;&nbsp;
+    <a class="btn ghost" href="gallery.html">認識我們的根源</a>
   </div>
-
   <div class="goldrule"></div>
 
-  <section>
+  <section id="sponsor">
     <h2>三種贊助方式</h2>
     <p class="lede">每一位學員 18 個月的課程費用為美金 $1,650。你可以按感動，選擇其中一種方式參與：</p>
     <div class="tiers">
@@ -129,22 +141,36 @@
 
   <section>
     <h2>填寫贊助報名表</h2>
-    <p class="lede">請留下你的資料，我們的同工會與你聯繫後續安排。</p>
+    <p class="lede">請留下你的資料，我們的同工會與你聯繫後續的贊助與付款安排。</p>
     <div class="formwrap">
-      <!-- ════════════════════════════════════════════════════
-           把下面 iframe 的 src 換成 Google 表單的嵌入連結：
-           在 Google 表單按「傳送」→ ＜＞ 嵌入 HTML → 複製 src 網址貼到這裡
-           ════════════════════════════════════════════════════ -->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVO6DEyiEIuu0MVAgmXsi5mkSu2Gbw18iKRkc6ZtK6VfhdCQ/viewform?embedded=true" title="贊助報名表">載入中…</iframe>
     </div>
   </section>
+</div>
 
+<div class="blueprint">
+  <div class="wrap">
+    <section id="blueprint">
+      <h2>South Windsor 建堂藍圖</h2>
+      <p class="lede">從 East Windsor 出發的關懷宣教士，把學生送往世界；<br>
+      今天，在隔壁的 South Windsor，我們要建造一個讓關懷者出發、也讓他們歸回的地方。</p>
+      <div class="ph">建堂概念圖即將公布<br><span style="font-size:.8em">（敬請期待）</span></div>
+      <ul class="facts">
+        <li>Nine-acre development：九英畝整全發展計劃</li>
+        <li>第一期：牧養中心（pastoral center）＋ 八間客房接待樓（eight-room guest house）＋ 規劃中的事工中心（planned ministry center）</li>
+        <li>異象：延續先賢的關懷宣教——訓練關懷者，也接待歸回的關懷者</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<div class="wrap">
   <section>
     <p class="verse">「你們各人的重擔要互相擔當，如此，就完全了基督的律法。」
       <span class="ref">加拉太書 6 : 2</span>
     </p>
     <div style="text-align:center">
-      <a class="btn" href="http://soulcare.wordnspirit.com/">了解心靈關懷課程</a>
+      <a class="btn ghost" href="http://soulcare.wordnspirit.com/" target="_blank" rel="noopener">了解心靈關懷課程</a>
     </div>
   </section>
 </div>
@@ -152,8 +178,19 @@
 <footer>
   <div class="wrap">
     基督燈台全球學院 · 人人都是關懷者<br>
-    25 位學習者 · 18 個月 · 2027 年 1 月開學
+    25 位學習者 · 18 個月 · 2027 年 1 月開學<br><br>
+    <a href="https://glsna.org/en/" target="_blank" rel="noopener">基督燈台協會</a> ·
+    <a href="https://youtube.com/@abepoimen" target="_blank" rel="noopener">Abe 詩歌 YouTube</a> ·
+    <a href="http://soulcare.wordnspirit.com/" target="_blank" rel="noopener">課程說明</a>
   </div>
 </footer>
+
+<script>
+function enSoon(){
+  var t=document.getElementById('entoast');
+  t.style.display='block';
+  setTimeout(function(){t.style.display='none';},2600);
+}
+</script>
 </body>
 </html>
