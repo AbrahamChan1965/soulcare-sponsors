@@ -1,0 +1,7 @@
+# Cloudflare Worker — serves the Soul Care sponsor sign-up page as static assets.
+name = "soulcare-sponsors"
+compatibility_date = "2026-10-10"
+
+[assets]
+directory = "./"
+not_found_handling = "single-page-application"
