@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Revival Plan for South Windsor | Golden Lampstand Association</title>
+<style>
+  :root{
+    --parchment:#f4ecd8; --parchment-deep:#eaddc2;
+    --ink:#2b2416; --ink-soft:#4a4030;
+    --gold:#b8912f; --gold-deep:#8f6f1f; --card:#faf5e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--parchment);
+    background-image:radial-gradient(ellipse at 20% 10%, rgba(184,145,47,.06), transparent 50%),
+                     radial-gradient(ellipse at 85% 90%, rgba(120,90,30,.07), transparent 55%);
+    color:var(--ink); line-height:1.85; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(43,36,22,.96);color:#f4ecd8;
+    border-bottom:3px solid var(--gold);
+  }
+  nav .navwrap{max-width:1060px;margin:0 auto;padding:0 16px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;}
+  nav a.nl{color:#f4ecd8;text-decoration:none;font-size:.82rem;letter-spacing:.08em;
+    padding:13px 10px;white-space:nowrap;}
+  nav a.nl:hover{color:var(--gold)}
+  nav .cta{background:var(--gold-deep);color:#fff8e8 !important;padding:8px 18px !important;
+    margin:6px 4px;letter-spacing:.12em;}
+  nav .cta:hover{background:var(--gold)}
+  nav .lang{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.8rem;color:#cbbf9f}
+  nav .lang button{background:none;border:1px solid #8a7a55;color:#f4ecd8;font-size:.78rem;
+    padding:4px 10px;cursor:pointer;font-family:inherit;letter-spacing:.08em}
+  nav .lang button.on{background:var(--gold-deep);border-color:var(--gold-deep)}
+  header.toprule{border-top:6px solid var(--gold)}
+  .eyebrow{text-align:center;margin:64px 0 12px;font-size:.85rem;letter-spacing:.3em;color:var(--gold-deep)}
+  .hero{text-align:center;padding:16px 0 26px}
+  .hero h1{font-size:clamp(1.8rem,5.5vw,2.8rem);line-height:1.4;font-weight:400;margin-bottom:20px}
+  .hero .sub{font-size:clamp(1.05rem,2.6vw,1.25rem);color:var(--ink-soft);max-width:62ch;margin:0 auto 10px;font-style:italic}
+  .hero p{max-width:64ch;margin:0 auto 10px;color:var(--ink-soft)}
+  .goldrule{width:120px;height:2px;background:var(--gold);margin:34px auto}
+  section{padding:40px 0}
+  section h2{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:400;text-align:center;margin-bottom:18px}
+  section p.lede{text-align:center;color:var(--ink-soft);max-width:64ch;margin:0 auto 1em}
+  .btn{display:inline-block;background:var(--gold-deep);color:#fff8e8;text-decoration:none;
+    letter-spacing:.12em;font-size:1rem;padding:15px 44px;margin-top:20px;transition:background .2s}
+  .btn:hover{background:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--gold-deep);border:1px solid var(--gold-deep)}
+  .btn.ghost:hover{background:var(--gold-deep);color:#fff8e8}
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:28px}
+  .photo{background:var(--card);border:1px solid var(--gold);box-shadow:0 8px 22px rgba(60,45,15,.15)}
+  .photo img{width:100%;display:block}
+  .photo .cap{padding:16px 20px;font-size:.92rem;color:var(--ink-soft)}
+  .photo .cap strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:4px;letter-spacing:.04em}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:30px}
+  .tier{background:var(--card);border:1px solid var(--gold);box-shadow:0 8px 22px rgba(60,45,15,.15);
+    padding:30px 22px;text-align:center;display:flex;flex-direction:column}
+  .tier .tag{display:inline-block;font-size:.75rem;letter-spacing:.25em;color:var(--gold-deep);
+    border:1px solid var(--gold);padding:4px 12px;margin-bottom:12px}
+  .tier h3{font-size:1.15rem;font-weight:400;margin-bottom:8px}
+  .tier p{font-size:.93rem;color:var(--ink-soft);flex:1}
+  .blueprint{background:var(--parchment-deep);border-top:1px solid rgba(184,145,47,.45);
+    border-bottom:1px solid rgba(184,145,47,.45)}
+  .blueprint img{width:100%;display:block;border:1px solid var(--gold);background:#fff}
+  .blueprint .cap{text-align:center;font-size:.85rem;color:var(--ink-soft);margin-top:12px;letter-spacing:.04em}
+  ul.facts{max-width:60ch;margin:18px auto;color:var(--ink-soft);list-style:none}
+  ul.facts li{padding:8px 0 8px 1.6em;position:relative}
+  ul.facts li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:.7em;top:1.1em}
+  .formwrap{background:var(--card);border:1px solid var(--gold);padding:12px;margin-top:24px}
+  .formwrap iframe{width:100%;min-height:900px;border:0;display:block;background:#fff}
+  .verse{text-align:center;font-style:italic;color:var(--ink-soft);max-width:58ch;margin:0 auto}
+  .verse .ref{display:block;margin-top:10px;font-style:normal;letter-spacing:.15em;font-size:.85rem;color:var(--gold-deep)}
+  footer{border-top:1px solid rgba(184,145,47,.45);padding:26px 0 46px;text-align:center;
+    font-size:.82rem;color:var(--ink-soft)}
+  footer a{color:var(--gold-deep)}
+  @media (max-width:640px){ section{padding:30px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="navwrap">
+    <a class="nl" href="#home">Home</a>
+    <a class="nl" href="#place">The Place</a>
+    <a class="nl" href="#phase1">Phase I</a>
+    <a class="nl" href="../gallery.html">Their Story</a>
+    <a class="nl" href="https://classroom.thegoldenlampstand.org/moodle/" target="_blank" rel="noopener">Global Academy↗</a>
+    <a class="nl cta" href="#support">Support</a>
+    <span class="lang"><button onclick="location.href='../'">中文</button><button class="on">EN</button></span>
+  </div>
+</nav>
+<header class="toprule" id="home"></header>
+<div class="wrap">
+  <p class="eyebrow">GOLDEN LAMPSTAND ASSOCIATION · SOUTH WINDSOR, CONNECTICUT</p>
+  <div class="hero">
+    <h1>A Revival Plan for South Windsor</h1>
+    <p class="sub">Their mission crossed the ocean. Ours begins at home.</p>
+    <p>At 437 &amp; 401 King Street in South Windsor, Connecticut — on land that carries the memory
+    of America's Great Awakening — Golden Lampstand Association is building a ten-acre campus:
+    a parsonage, a retreat house, and a ministry center. A place where caregivers are formed,
+    and where missionaries find rest on their way home.</p>
+    <a class="btn" href="#support">Become a Supporter</a>
+    &nbsp;&nbsp;
+    <a class="btn ghost" href="#place">See the Place</a>
+  </div>
+  <div class="goldrule"></div>
+  <section id="place">
+    <h2>The Place</h2>
+    <p class="lede">Two neighboring parcels on King Street. One holds our present; the other holds our future.</p>
+    <div class="photos">
+      <div class="photo">
+        <img src="../images/house-437.jpg" alt="The house at 437 King Street, South Windsor">
+        <div class="cap"><strong>437 King Street — One Acre</strong>
+        The existing house, already a place of prayer. Our foothold on King Street, and the seed of all that follows.</div>
+      </div>
+      <div class="photo">
+        <img src="../images/land-401.jpg" alt="Coworkers praying on the open land at 401 King Street, South Windsor">
+        <div class="cap"><strong>401 King Street — 9.1 Acres</strong>
+        Open land, prayed over by our coworkers. Here Phase I will rise: parsonage, retreat house, and ministry center around a village green.</div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="blueprint">
+  <div class="wrap">
+    <section id="blueprint">
+      <h2>The Blueprint</h2>
+      <p class="lede">Phase I: parsonage, ministry center, guest house, village green —
+      with room to grow in Phase II.</p>
+      <img src="../images/phasing-plan.png" alt="Phasing plan for 401 King Street, South Windsor">
+      <p class="cap">Phasing plan, 401 King Street — Design Professionals, Inc., March 2025</p>
+      <ul class="facts">
+        <li><strong>Phase I</strong> — Parsonage, ministry center, eight-room guest house, access drive, parking, and village green</li>
+        <li><strong>Phase II</strong> — Additional residences, garage, and greenhouse with a paved roadway loop</li>
+        <li>A quiet campus by design — a place of retreat and formation, not a crowd</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="wrap">
+  <section id="phase1">
+    <h2>Phase I — Three Buildings, One Calling</h2>
+    <div class="tiers">
+      <div class="tier">
+        <span class="tag">PHASE I</span>
+        <h3>Parsonage</h3>
+        <p>A home for the pastor — so that those who shepherd God's people live rooted among the community they serve.</p>
+      </div>
+      <div class="tier">
+        <span class="tag">PHASE I</span>
+        <h3>Retreat House</h3>
+        <p>An eight-room guest house — a quiet haven where missionaries, pastors, and weary servants of God can rest, pray, and be renewed.</p>
+      </div>
+      <div class="tier">
+        <span class="tag">PHASE I</span>
+        <h3>Ministry Center</h3>
+        <p>A center for training and sending — where caregivers are formed in the way of Christ and prepared for the work of mission.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Their Story, Our Call</h2>
+    <p class="lede">In the 19th century, thirteen men and women from New England, upstate New York,
+    and New Jersey crossed the ocean to bring the Gospel — and works of mercy — to China.
+    Their care crossed the ocean. Now the call has come home: on this land in South Windsor,
+    we will build a place that trains caregivers — and welcomes them home.</p>
+    <div style="text-align:center">
+      <a class="btn ghost" href="../gallery.html">Meet the Thirteen</a>
+    </div>
+  </section>
+  <section id="support">
+    <h2>Stand With Us</h2>
+    <p class="lede">Whether through prayer, giving, or volunteering — let us know you would like
+    to be part of this revival plan. One of our coworkers will contact you personally.</p>
+    <div style="text-align:center">
+      <a class="btn" href="https://glsna.org/support-us/" target="_blank" rel="noopener">Give Online↗</a>
+    </div>
+    <div class="formwrap">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOrwE9Oh7eRepY3xIHgKeCfeYgWVPSnZQzJBs9of4mGsBokw/viewform?embedded=true" title="Supporter Interest Form">Loading…</iframe>
+    </div>
+  </section>
+  <section>
+    <p class="verse">"For where two or three gather in my name, there am I with them."
+      <span class="ref">MATTHEW 18 : 20</span>
+    </p>
+  </section>
+</div>
+<footer>
+  <div class="wrap">
+    Golden Lampstand Association · South Windsor, Connecticut<br>
+    437 &amp; 401 King Street — a ten-acre revival plan<br><br>
+    <a href="https://glsna.org/support-us/" target="_blank" rel="noopener">Support Us↗</a> ·
+    <a href="https://classroom.thegoldenlampstand.org/moodle/" target="_blank" rel="noopener">Global Academy↗</a> ·
+    <a href="../">中文版</a>
+  </div>
+</footer>
+</body>
+</html>
