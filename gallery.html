@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歷史長廊｜人人都是關懷者</title>
+<style>
+  :root{
+    --parchment:#f4ecd8; --parchment-deep:#eaddc2;
+    --ink:#2b2416; --ink-soft:#4a4030;
+    --gold:#b8912f; --gold-deep:#8f6f1f; --card:#faf5e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Songti TC','PMingLiU','SimSun',Georgia,serif;
+    background:var(--parchment);
+    background-image:radial-gradient(ellipse at 20% 10%, rgba(184,145,47,.06), transparent 50%),
+                     radial-gradient(ellipse at 85% 90%, rgba(120,90,30,.07), transparent 55%);
+    color:var(--ink); line-height:1.9; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(43,36,22,.96);color:#f4ecd8;border-bottom:3px solid var(--gold)}
+  nav .navwrap{max-width:1060px;margin:0 auto;padding:0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}
+  nav a.nl{color:#f4ecd8;text-decoration:none;font-size:.82rem;letter-spacing:.08em;padding:13px 10px;white-space:nowrap}
+  nav a.nl:hover{color:var(--gold)}
+  nav .cta{background:var(--gold-deep);color:#fff8e8 !important;padding:8px 18px !important;margin:6px 4px;letter-spacing:.12em}
+  nav .cta:hover{background:var(--gold)}
+  nav .lang{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.8rem;color:#cbbf9f}
+  nav .lang button{background:none;border:1px solid #8a7a55;color:#f4ecd8;font-size:.78rem;padding:4px 10px;cursor:pointer;font-family:inherit;letter-spacing:.08em}
+  nav .lang button.on{background:var(--gold-deep);border-color:var(--gold-deep)}
+  header.toprule{border-top:6px solid var(--gold)}
+  .eyebrow{text-align:center;margin:60px 0 12px;font-size:.85rem;letter-spacing:.35em;color:var(--gold-deep)}
+  .hero{text-align:center;padding:14px 0 10px}
+  .hero h1{font-size:clamp(1.8rem,6vw,2.8rem);font-weight:400;margin-bottom:16px;line-height:1.5}
+  .hero .sub{color:var(--ink-soft);max-width:64ch;margin:0 auto 8px;font-size:clamp(1rem,2.6vw,1.15rem)}
+  .goldrule{width:120px;height:2px;background:var(--gold);margin:32px auto}
+  section{padding:36px 0}
+  section h2{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:400;text-align:center;margin-bottom:16px}
+  section p.lede{text-align:center;color:var(--ink-soft);max-width:64ch;margin:0 auto 1em}
+  .lead{display:grid;grid-template-columns:280px 1fr;gap:34px;align-items:start;margin-top:28px}
+  .lead img{width:100%;border:1px solid var(--gold);box-shadow:0 10px 26px rgba(60,45,15,.2);display:block}
+  .lead .cap{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:8px;letter-spacing:.06em}
+  .lead h3{font-size:1.5rem;font-weight:400;margin-bottom:6px}
+  .lead .years{color:var(--gold-deep);letter-spacing:.14em;font-size:.9rem;margin-bottom:14px}
+  .lead p{margin-bottom:1em;color:var(--ink-soft)}
+  .bridge{background:var(--parchment-deep);border:1px solid rgba(184,145,47,.5);padding:24px 26px;margin-top:26px}
+  .bridge p{margin:0;color:var(--ink-soft)}
+  .bridge strong{color:var(--gold-deep);font-weight:400}
+  .four{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;margin-top:28px}
+  .person{background:var(--card);border:1px solid var(--gold);padding:20px;text-align:center}
+  .person img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid rgba(184,145,47,.5);display:block}
+  .person h3{font-size:1.05rem;font-weight:400;margin:12px 0 2px}
+  .person .en{font-size:.78rem;color:var(--gold-deep);letter-spacing:.06em;margin-bottom:8px}
+  .person p{font-size:.86rem;color:var(--ink-soft);text-align:left}
+  .nine{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:28px}
+  .card{background:var(--card);border:1px solid rgba(184,145,47,.55);padding:20px 22px}
+  .card h3{font-size:1.02rem;font-weight:400}
+  .card .meta{font-size:.78rem;color:var(--gold-deep);letter-spacing:.05em;margin:4px 0 8px}
+  .card p{font-size:.86rem;color:var(--ink-soft)}
+  .verse{text-align:center;font-style:italic;color:var(--ink-soft);max-width:58ch;margin:0 auto}
+  .verse .ref{display:block;margin-top:10px;font-style:normal;letter-spacing:.15em;font-size:.85rem;color:var(--gold-deep)}
+  .btn{display:inline-block;background:var(--gold-deep);color:#fff8e8;text-decoration:none;letter-spacing:.12em;
+    font-size:1rem;padding:15px 44px;margin-top:20px;transition:background .2s}
+  .btn:hover{background:var(--ink)}
+  footer{border-top:1px solid rgba(184,145,47,.45);padding:26px 0 46px;text-align:center;font-size:.82rem;color:var(--ink-soft)}
+  footer a{color:var(--gold-deep)}
+  #entoast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);color:#f4ecd8;
+    padding:12px 26px;font-size:.9rem;letter-spacing:.06em;display:none;z-index:99;border:1px solid var(--gold)}
+  @media (max-width:700px){ .lead{grid-template-columns:1fr} .lead img{max-width:320px;margin:0 auto} }
+  @media (max-width:640px){ section{padding:28px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navwrap">
+    <a class="nl" href="index.html">首頁</a>
+    <a class="nl" href="http://soulcare.wordnspirit.com/" target="_blank" rel="noopener">課程說明</a>
+    <a class="nl" href="gallery.html">歷史長廊</a>
+    <a class="nl" href="https://glsna.org/en/" target="_blank" rel="noopener">基督燈台協會</a>
+    <a class="nl" href="index.html#blueprint">建堂藍圖</a>
+    <a class="nl" href="https://youtube.com/@abepoimen" target="_blank" rel="noopener">Abe 詩歌</a>
+    <a class="nl cta" href="index.html#sponsor">成為贊助者</a>
+    <span class="lang"><button class="on">中文</button><button onclick="enSoon()">EN</button></span>
+  </div>
+</nav>
+<div id="entoast">英文版即將推出 · English version coming soon</div>
+
+<header class="toprule"></header>
+<div class="wrap">
+  <p class="eyebrow">歷史長廊 · The Carers' Gallery</p>
+  <div class="hero">
+    <h1>從 New England 到中華大地</h1>
+    <p class="sub">十九世紀，一批從新英格蘭、紐約上州、新澤西出發的宣教士，把福音與關懷帶到了中國。<br>
+    他們的見證，至今仍在對我們說話——關懷，從來不是一句口號，而是一生的同行。</p>
+  </div>
+  <div class="goldrule"></div>
+
+  <section>
+    <h2>排頭 · 從 East Windsor 出發的人</h2>
+    <div class="lead">
+      <div>
+        <img src="images/samuel-robbins-brown.jpg" alt="Samuel Robbins Brown 肖像">
+        <p class="cap">Samuel Robbins Brown（1810–1880）</p>
+      </div>
+      <div>
+        <h3>布朗 Samuel Robbins Brown</h3>
+        <p class="years">1810–1880 · 康涅狄格州 East Windsor</p>
+        <p>1810 年，布朗生於康州 <strong>East Windsor</strong>——正是今天 South Windsor 隔壁的小鎮。1832 年耶魯畢業，入協和神學院首屆；1838 年，他以教師身份隨馬禮遜教育會前往廣州，主持<strong>中國第一所更正教學校</strong>馬禮遜學校。</p>
+        <p>1847 年，他帶著三名學生——<strong>容闳、黃勝、黃寬</strong>——橫渡太平洋赴美求學。1854 年，容闳從耶魯畢業，成為<strong>第一位畢業於美國大學的中國學生</strong>，中國留學事業自此開端。</p>
+        <p>1859 年起，他在日本二十年：辦學、培育一代日本領袖，並主持<strong>日文新約聖經翻譯</strong>，協助創立日本亞洲學會。</p>
+        <div class="bridge">
+          <p>兩個世紀前，他從 East Windsor 出發，把關懷帶給中國與日本的年輕人；<br>
+          今天，<strong>金燈台事工在隔壁的 South Windsor</strong>，接續同樣的使命——訓練「人人都是關懷者」，也為關懷者建造歸回的家。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="goldrule"></div>
+
+  <section>
+    <h2>四位先驅</h2>
+    <p class="lede">與布朗同一時代、從新英格蘭出發的關懷者，他們的足跡遍佈廣州、上海、香港。</p>
+    <div class="four">
+      <div class="person">
+        <img src="images/elijah-bridgman.jpg" alt="裨治文肖像">
+        <h3>裨治文</h3>
+        <p class="en">Elijah Coleman Bridgman · 1801–1861 · 麻州 Belchertown</p>
+        <p>首位赴華的美國更正教宣教士。創辦《中國叢報》——世界第一份重要漢學期刊，被譽為美國漢學奠基人。</p>
+      </div>
+      <div class="person">
+        <img src="images/eliza-bridgman.jpg" alt="裨愛利肖像">
+        <h3>裨愛利</h3>
+        <p class="en">Eliza Jane Gillett Bridgman · 1805–1871 · 康州 Derby</p>
+        <p>創辦上海第一所更正教女子學校；守寡後重返北京，創辦貝滿女塾——燕京大學女子學院的前身。</p>
+      </div>
+      <div class="person">
+        <img src="images/peter-parker.jpg" alt="伯駕肖像">
+        <h3>伯駕</h3>
+        <p class="en">Peter Parker · 1804–1888 · 麻州 Framingham</p>
+        <p>中國第一位全職醫療宣教士。1835 年在廣州開設眼科醫局（博濟醫院），「以柳葉刀尖為福音開路」。</p>
+      </div>
+      <div class="person">
+        <img src="images/samuel-robbins-brown.jpg" alt="布朗肖像">
+        <h3>布朗</h3>
+        <p class="en">Samuel Robbins Brown · 1810–1880 · 康州 East Windsor</p>
+        <p>中國第一所更正教學校校長；帶容闳等三少年赴美；日本二十年，翻譯日文新約。本長廊排頭人物。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="goldrule"></div>
+
+  <section>
+    <h2>十三位關懷先賢名錄</h2>
+    <p class="lede">從十九世紀到二十世紀中葉，他們從 New England、紐約上州、新澤西出發，把一生獻給了中國。</p>
+    <div class="nine">
+      <div class="card">
+        <h3>衛三畏</h3>
+        <p class="meta">Samuel Wells Williams · 1812–1884 · 紐約 Utica</p>
+        <p>著《中國總論》《漢英韻府》，定義一代西方人對中國的認識；1877 年成為耶魯首任中文教授——美國第一個漢學講席。</p>
+      </div>
+      <div class="card">
+        <h3>倪維思</h3>
+        <p class="meta">John Livingston Nevius · 1829–1893 · 紐約上州</p>
+        <p>在山東提出「三自」教會方法——自傳、自養、自立；這套在中國孕育的方法，在韓國結出最豐碩的果實。</p>
+      </div>
+      <div class="card">
+        <h3>菲爾德</h3>
+        <p class="meta">Adele Marion Fielde · 1839–1916 · 紐約 East Rodman</p>
+        <p>在汕頭開辦聖經婦女學校、編纂潮州話詞典、倡導廢除纏足；返美後成為美國婦女參政運動領袖。</p>
+      </div>
+      <div class="card">
+        <h3>明恩溥</h3>
+        <p class="meta">Arthur Henderson Smith · 1845–1932 · 康州 Vernon</p>
+        <p>《中國人的性格》作者；在華 54 年，曾說服羅斯福總統退還部分庚子賠款，催生庚款獎學金與清華大學。</p>
+      </div>
+      <div class="card">
+        <h3>瑪高溫</h3>
+        <p class="meta">Daniel Jerome MacGowan · 1815–1893 · 羅德島 Pawtucket</p>
+        <p>最早的美國浸信會醫療宣教士之一，1841 年起在寧波、上海行醫傳道；晚年重返中國，卒於上海。</p>
+      </div>
+      <div class="card">
+        <h3>雅裨理</h3>
+        <p class="meta">David Abeel · 1804–1846 · 新澤西 New Brunswick</p>
+        <p>1842 年在廈門開創歸正會宣教站；在廈門助徐繼畲編成《瀛寰志略》——十九世紀中國最有影響力的世界地理著作。</p>
+      </div>
+      <div class="card">
+        <h3>步惠廉</h3>
+        <p class="meta">Stephen Livingston Baldwin · 1835–1902 · 新澤西 Somerville</p>
+        <p>福州宣教士；1868 年把宗派刊物改造為跨宗派《教務雜誌》（Chinese Recorder），成為研究在華宣教最重要的文獻。</p>
+      </div>
+      <div class="card">
+        <h3>波乃耶</h3>
+        <p class="meta">Dyer Ball · 1796–1866 · 麻州 West Boylston</p>
+        <p>1838 年受美部會差派，足跡遍及新加坡、澳門、香港、廣州，在華南服事近三十年。</p>
+      </div>
+      <div class="card">
+        <h3>盧公明</h3>
+        <p class="meta">Justus Doolittle · 1824–1880 · 紐約 Rutland</p>
+        <p>福州宣教士；《中國社會生活》作者，以細膩筆觸記錄十九世紀中國民間社會，傳世至今。</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:26px">他們把福音帶到中華大地；<br>今天，輪到我們把關懷傳下去。</p>
+    <div style="text-align:center">
+      <a class="btn" href="index.html#sponsor">成為贊助者</a>
+    </div>
+  </section>
+
+  <div class="goldrule"></div>
+
+  <section>
+    <p class="verse">「你們各人的重擔要互相擔當，如此，就完全了基督的律法。」
+      <span class="ref">加拉太書 6 : 2</span>
+    </p>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    基督燈台全球學院 · 人人都是關懷者<br>
+    25 位學習者 · 18 個月 · 2027 年 1 月開學<br><br>
+    <a href="https://glsna.org/en/" target="_blank" rel="noopener">基督燈台協會</a> ·
+    <a href="https://youtube.com/@abepoimen" target="_blank" rel="noopener">Abe 詩歌 YouTube</a> ·
+    <a href="http://soulcare.wordnspirit.com/" target="_blank" rel="noopener">課程說明</a>
+  </div>
+</footer>
+
+<script>
+function enSoon(){
+  var t=document.getElementById('entoast');
+  t.style.display='block';
+  setTimeout(function(){t.style.display='none';},2600);
+}
+</script>
+</body>
+</html>
