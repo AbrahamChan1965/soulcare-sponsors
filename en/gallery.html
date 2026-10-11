@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Carers' Gallery | A Revival Plan for South Windsor</title>
+<style>
+  :root{
+    --parchment:#f4ecd8; --parchment-deep:#eaddc2;
+    --ink:#2b2416; --ink-soft:#4a4030;
+    --gold:#b8912f; --gold-deep:#8f6f1f; --card:#faf5e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--parchment);
+    background-image:radial-gradient(ellipse at 20% 10%, rgba(184,145,47,.06), transparent 50%),
+                     radial-gradient(ellipse at 85% 90%, rgba(120,90,30,.07), transparent 55%);
+    color:var(--ink); line-height:1.85; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(43,36,22,.96);color:#f4ecd8;border-bottom:3px solid var(--gold)}
+  nav .navwrap{max-width:1060px;margin:0 auto;padding:0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}
+  nav a.nl{color:#f4ecd8;text-decoration:none;font-size:.82rem;letter-spacing:.08em;padding:13px 10px;white-space:nowrap}
+  nav a.nl:hover{color:var(--gold)}
+  nav .cta{background:var(--gold-deep);color:#fff8e8 !important;padding:8px 18px !important;margin:6px 4px;letter-spacing:.12em}
+  nav .cta:hover{background:var(--gold)}
+  nav .lang{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.8rem;color:#cbbf9f}
+  nav .lang button{background:none;border:1px solid #8a7a55;color:#f4ecd8;font-size:.78rem;padding:4px 10px;cursor:pointer;font-family:inherit;letter-spacing:.08em}
+  nav .lang button.on{background:var(--gold-deep);border-color:var(--gold-deep)}
+  header.toprule{border-top:6px solid var(--gold)}
+  .eyebrow{text-align:center;margin:60px 0 12px;font-size:.85rem;letter-spacing:.3em;color:var(--gold-deep)}
+  .hero{text-align:center;padding:14px 0 10px}
+  .hero h1{font-size:clamp(1.8rem,6vw,2.8rem);font-weight:400;margin-bottom:16px;line-height:1.4}
+  .hero .sub{color:var(--ink-soft);max-width:64ch;margin:0 auto 8px;font-size:clamp(1rem,2.6vw,1.15rem)}
+  .goldrule{width:120px;height:2px;background:var(--gold);margin:32px auto}
+  section{padding:36px 0}
+  section h2{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:400;text-align:center;margin-bottom:16px}
+  section p.lede{text-align:center;color:var(--ink-soft);max-width:64ch;margin:0 auto 1em}
+  .lead{display:grid;grid-template-columns:280px 1fr;gap:34px;align-items:start;margin-top:28px}
+  .lead img{width:100%;border:1px solid var(--gold);box-shadow:0 10px 26px rgba(60,45,15,.2);display:block}
+  .lead .cap{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:8px;letter-spacing:.06em}
+  .lead h3{font-size:1.5rem;font-weight:400;margin-bottom:6px}
+  .lead .years{color:var(--gold-deep);letter-spacing:.14em;font-size:.9rem;margin-bottom:14px}
+  .lead p{margin-bottom:1em;color:var(--ink-soft)}
+  .bridge{background:var(--parchment-deep);border:1px solid rgba(184,145,47,.5);padding:24px 26px;margin-top:26px}
+  .bridge p{margin:0;color:var(--ink-soft)}
+  .bridge strong{color:var(--gold-deep);font-weight:400}
+  .placenote{border:1px dashed var(--gold);padding:18px 22px;margin-top:18px;font-size:.88rem;color:var(--ink-soft)}
+  .placenote strong{color:var(--gold-deep);font-weight:400;letter-spacing:.08em}
+  .nine{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:28px}
+  .card{background:var(--card);border:1px solid rgba(184,145,47,.55);padding:20px 22px}
+  .card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;
+    border:1px solid rgba(184,145,47,.5);display:block;margin-bottom:12px;background:#fff}
+  .card h3{font-size:1.05rem;font-weight:400}
+  .card .meta{font-size:.78rem;color:var(--gold-deep);letter-spacing:.05em;margin:4px 0 8px}
+  .card p{font-size:.88rem;color:var(--ink-soft)}
+  .verse{text-align:center;font-style:italic;color:var(--ink-soft);max-width:58ch;margin:0 auto}
+  .verse .ref{display:block;margin-top:10px;font-style:normal;letter-spacing:.15em;font-size:.85rem;color:var(--gold-deep)}
+  .btn{display:inline-block;background:var(--gold-deep);color:#fff8e8;text-decoration:none;letter-spacing:.12em;
+    font-size:1rem;padding:15px 44px;margin-top:20px;transition:background .2s}
+  .btn:hover{background:var(--ink)}
+  footer{border-top:1px solid rgba(184,145,47,.45);padding:26px 0 46px;text-align:center;font-size:.82rem;color:var(--ink-soft)}
+  footer a{color:var(--gold-deep)}
+  @media (max-width:700px){ .lead{grid-template-columns:1fr} .lead img{max-width:320px;margin:0 auto} }
+  @media (max-width:640px){ section{padding:28px 0} nav a.nl{font-size:.76rem;padding:11px 7px} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="navwrap">
+    <a class="nl" href="index.html">Home</a>
+    <a class="nl" href="index.html#place">The Place</a>
+    <a class="nl" href="index.html#phase1">Phase I</a>
+    <a class="nl" href="gallery.html">Their Story</a>
+    <a class="nl" href="https://classroom.thegoldenlampstand.org/moodle/" target="_blank" rel="noopener">Global Academy↗</a>
+    <a class="nl cta" href="index.html#support">Support</a>
+    <span class="lang"><button onclick="location.href='../gallery.html'">中文</button><button class="on">EN</button></span>
+  </div>
+</nav>
+<header class="toprule"></header>
+<div class="wrap">
+  <p class="eyebrow">THE CARERS' GALLERY</p>
+  <div class="hero">
+    <h1>From New England to China</h1>
+    <p class="sub">In the nineteenth century, men and women from New England, upstate New York,
+    and New Jersey carried the Gospel — and works of mercy — to China.<br>
+    Their witness still speaks: care was never a slogan, but a lifetime of walking alongside.</p>
+  </div>
+  <div class="goldrule"></div>
+  <section>
+    <h2>First Among Them — The Man from East Windsor</h2>
+    <div class="lead">
+      <div>
+        <img src="../images/samuel-robbins-brown.jpg" alt="Portrait of Samuel Robbins Brown">
+        <p class="cap">Samuel Robbins Brown · 1810–1880</p>
+      </div>
+      <div>
+        <h3>Samuel Robbins Brown</h3>
+        <p class="years">1810 – 1880 · EAST WINDSOR, CONNECTICUT</p>
+        <p>Samuel Robbins Brown was born in East Windsor, Connecticut, on June 16, 1810.
+        In his day there was no South Windsor — the town would not be set off from East
+        Windsor until 1845, when Brown was thirty-five. The old town center of East
+        Windsor itself stood at East Windsor Hill, on Main Street in what is today South
+        Windsor. The line between the two towns is a modern invention; in Brown's
+        Connecticut it was all one place — East Windsor, daughter of Ancient Windsor.
+        He graduated from Yale College in 1832, belonged to the first graduating class
+        of Union Theological Seminary, and before ever leaving America taught for four
+        years at the New York Institution for the Deaf and Dumb. He was a schoolmaster
+        by training, and a schoolmaster he remained all his life.</p>
+        <p>In 1838 he sailed for Canton under the Morrison Education Society and opened
+        China's first Protestant school — at Macao in 1839, moved to Hong Kong in 1842.
+        Its annual reports, printed in the <em>Chinese Repository</em> from 1840 to 1846,
+        record one of the earliest experiments in modern education on Chinese soil.</p>
+        <p>In 1847 his wife's failing health forced the family home. Brown did not return
+        alone: three of his pupils — Yung Wing, Wong Shing, and Wong Foon — crossed the
+        Pacific with him and enrolled at Monson Academy in Massachusetts. In 1854 Yung
+        Wing graduated from Yale College, the first Chinese student to graduate from an
+        American university. Those three boys were the beginning of China's great
+        educational mission to America.</p>
+        <p>Brown also labored for the founding of a college for women — first at Auburn,
+        then at Elmira, New York. That school is Elmira College today.</p>
+        <p>After the Harris Treaty of 1858 opened Japan, Brown sailed for Yokohama. For
+        twenty years (1859–1879) he ran a school whose hundreds of pupils became leaders
+        of modern Japan, headed the translation of the New Testament into Japanese, and
+        helped found the Asiatic Society of Japan. Several of his English pupils were
+        among the first Japanese Christians baptized, at Yokohama in 1872.</p>
+      </div>
+    </div>
+    <div class="placenote">
+      <strong>A NOTE ON PLACE NAMES · </strong>In 1810, when Samuel Robbins Brown was
+      born, there was no South Windsor. The town was set off from East Windsor in
+      1845 — and the old town center of East Windsor stood at East Windsor Hill, on
+      Main Street in what is today South Windsor. The line between the two towns is a
+      modern one; in Brown's day it was all East Windsor, daughter of Ancient Windsor.
+    </div>
+    <div class="bridge">
+      <p><strong>The bridge: </strong>A Connecticut schoolmaster whose classrooms spanned
+      three nations — he carried modern schooling to China, carried Chinese students to
+      America, and carried the Gospel to Japan. He was born in East Windsor before South
+      Windsor existed; the old town center he knew stands on Main Street in today's
+      South Windsor. Two centuries later, on King Street — a few miles from that old
+      center — the Golden Lampstand Association continues the same calling: forming
+      caregivers, and building a home for them to return to.</p>
+    </div>
+  </section>
+  <section>
+    <h2>The Thirteen</h2>
+    <p class="lede">From the nineteenth century into the mid-twentieth, they set out from New
+    England, upstate New York, and New Jersey, and gave their lives to China.</p>
+    <div class="nine">
+      <div class="card">
+        <img src="../images/samuel-robbins-brown.jpg" alt="Portrait of Samuel Robbins Brown">
+        <h3>Samuel Robbins Brown</h3>
+        <p class="meta">1810–1880 · East Windsor, Connecticut</p>
+        <p>China's first Protestant schoolmaster; the man who brought the first Chinese
+        students to America; translator of the Japanese New Testament. Read his full
+        story above — he is the bridge this gallery stands on: East Windsor to the world.</p>
+      </div>
+      <div class="card">
+        <img src="../images/elijah-bridgman.jpg" alt="Portrait of Elijah Coleman Bridgman">
+        <h3>Elijah Coleman Bridgman</h3>
+        <p class="meta">1801–1861 · Belchertown, Massachusetts</p>
+        <p>The first American Protestant missionary appointed to China, sailing in October
+        1829 — and the model of the bridge-builder. He founded the <em>Chinese
+        Repository</em> in 1832, the world's first major journal of sinology: he explained
+        China to the West. Then he turned the bridge around — mastering Cantonese within
+        a year, publishing a 730-page Cantonese textbook, and writing the first
+        Chinese-language history of the United States: he explained America to China. He
+        helped draft America's first treaty with China and spent his final years in
+        Shanghai supervising the Bible's translation. He died in Shanghai in 1861 and
+        never came home. Two worlds, one life's work.</p>
+      </div>
+      <div class="card">
+        <img src="../images/eliza-bridgman.jpg" alt="Portrait of Eliza Jane Gillett Bridgman">
+        <h3>Eliza Jane Gillett Bridgman</h3>
+        <p class="meta">1805–1871 · Derby, Connecticut</p>
+        <p>She sailed as one of the first three unmarried women missionaries of her board
+        and married Elijah Bridgman in Hong Kong in 1845. In Shanghai she founded and ran
+        the first Protestant girls' school for fifteen years — building a bridge for
+        Chinese women into a world of learning that had been closed to them. Widowed in
+        1861, she returned to China alone, and in 1864, at her own expense, bought land
+        in Beijing to found the Bridgman Academy, the forerunner of Yenching
+        University's women's college. Her schools trained a generation of Chinese women
+        leaders. She died in Shanghai in 1871 and lies buried beside her husband.</p>
+      </div>
+      <div class="card">
+        <img src="../images/peter-parker.jpg" alt="Portrait of Peter Parker">
+        <h3>Peter Parker</h3>
+        <p class="meta">1804–1888 · Framingham, Massachusetts</p>
+        <p>China's first full-time Protestant medical missionary — and proof that mercy is
+        a bridge nothing else can build. In 1835 he opened the Ophthalmic Hospital in
+        Canton; more than two thousand patients came in its first year, and he was the
+        first to bring ether anesthesia to China. He hired the Western-trained Chinese
+        painter Lam Qua to paint his tumor patients; eighty-seven of those portraits
+        hang at Yale to this day — art and medicine bridging two cultures on canvas. He
+        served as chief interpreter in America's first treaty negotiations with China and
+        later as U.S. Commissioner to China. He opened the way for the gospel with the
+        point of the lancet.</p>
+      </div>
+      <div class="card">
+        <img src="../images/williams.jpg" alt="Portrait of Samuel Wells Williams">
+        <h3>Samuel Wells Williams</h3>
+        <p class="meta">1812–1884 · Utica, New York</p>
+        <p>The scholar who built the bridge of understanding between West and East. He
+        arrived in Canton in 1833 to run the mission press, co-edited the <em>Chinese
+        Repository</em>, sailed to Japan on the <em>Morrison</em> in 1837, and
+        interpreted on Commodore Perry's 1853–54 expedition that opened Japan. As
+        secretary and interpreter of the U.S. legation in China, he helped negotiate the
+        1858 Treaty of Tientsin, whose toleration clause legalized Christian missions in
+        China. His <em>The Middle Kingdom</em> (1848) and his <em>Syllabic Dictionary of
+        the Chinese Language</em> (1874) defined how a generation of Westerners saw
+        China. In 1877 he became Yale's first professor of Chinese — America's first
+        sinology chair.</p>
+      </div>
+      <div class="card">
+        <img src="../images/nevius.jpg" alt="Portrait of John Livingston Nevius">
+        <h3>John Livingston Nevius</h3>
+        <p class="meta">1829–1893 · Upstate New York</p>
+        <p>He reached China in 1854 and spent nearly forty years on the field, most of
+        them in Shantung, without ever permanently returning to America. There he worked
+        out the "three-self" method — churches self-propagating, self-supporting, and
+        self-governing from the very first day. Then came the surprise that makes his
+        story a bridge: the method bore its richest fruit not in China but in Korea,
+        where the church adopted it and became one of the most independent and vital
+        non-Western churches in the world. A gift first conceived on Chinese soil became
+        a gift to the whole world church.</p>
+      </div>
+      <div class="card">
+        <img src="../images/fielde.jpg" alt="Portrait of Adele Marion Fielde">
+        <h3>Adele Marion Fielde</h3>
+        <p class="meta">1839–1916 · East Rodman, New York</p>
+        <p>At twenty-seven she sailed for China to marry her missionary fiancé — who died
+        weeks before her ship arrived. She stayed anyway, and her mission flowed in both
+        directions. After years in Bangkok she settled in Swatow, where she ran a school
+        for "Bible women," preached in the local dialect, and trained Chinese women as
+        evangelists and rural health educators. She campaigned against footbinding and
+        slavery, founded a hospital, and compiled the first systematic dictionary of the
+        Swatow dialect (1883). During a furlough she studied medicine and biology and
+        published original research on ant behavior. In 1889 she resigned from the
+        mission and became a leader of the American women's suffrage movement.</p>
+      </div>
+      <div class="card">
+        <img src="../images/smith.jpg" alt="Portrait of Arthur Henderson Smith">
+        <h3>Arthur Henderson Smith</h3>
+        <p class="meta">1845–1932 · Vernon, Connecticut</p>
+        <p>A Civil War veteran who gave China fifty-four years (1872–1926), most of them
+        in a village in Shantung — and built one of the sturdiest bridges between the
+        two worlds. His <em>Chinese Characteristics</em> (1894) was America's best-selling
+        book on China before Pearl Buck's <em>The Good Earth</em>. Then he built a bridge
+        no book could: he persuaded President Theodore Roosevelt to remit part of the
+        Boxer indemnity, catalyzing the indemnity scholarships — and the founding of
+        Tsinghua University. Advocacy in Washington raised a university in Beijing.</p>
+      </div>
+      <div class="card">
+        <img src="../images/macgowan.jpg" alt="Portrait of Daniel Jerome MacGowan">
+        <h3>Daniel Jerome MacGowan</h3>
+        <p class="meta">1815–1893 · Pawtucket, Rhode Island</p>
+        <p>A Baptist medical missionary trained in New York and Paris, practicing medicine
+        and preaching in Ningbo and Shanghai in the 1840s and 1850s — among the earliest
+        of the Baptist medical line. He later served as a Union Army surgeon in the
+        American Civil War and wrote sharp commentaries on China's foreign relations for
+        the English press in Shanghai. Medicine for the body, the press for the mind:
+        his bridge was built of healing and words.</p>
+      </div>
+      <div class="card">
+        <img src="../images/abeel.jpg" alt="Portrait of David Abeel">
+        <h3>David Abeel</h3>
+        <p class="meta">1804–1846 · New Brunswick, New Jersey</p>
+        <p>Sent out by the Reformed Church in America, he first reached China's coast as a
+        seamen's chaplain in 1830, then toured the Chinese communities of Southeast Asia
+        — effectively beginning American mission work in Siam. In 1842 he founded the
+        Reformed mission station at Amoy. But his most enduring bridge was a friendship:
+        in Amoy he befriended the scholar-official Xu Jiyu, supplied him with Western
+        source materials, and helped him compile a landmark geography of the world — one
+        of nineteenth-century China's most influential windows onto the wider world. He
+        died in Albany, New York, in 1846, aged forty-two.</p>
+      </div>
+      <div class="card">
+        <img src="../images/baldwin.jpg" alt="Portrait of Stephen Livingston Baldwin">
+        <h3>Stephen Livingston Baldwin</h3>
+        <p class="meta">1835–1902 · Somerville, New Jersey</p>
+        <p>A Methodist Episcopal missionary in Foochow (1859–1870) and an early advocate of
+        self-supporting Chinese churches. In 1868 he took over his denomination's
+        <em>Missionary Recorder</em> and rebuilt it as the interdenominational
+        <em>Chinese Recorder</em> — the single most important documentary source for
+        studying the entire missionary enterprise in China. He is this gallery's keeper
+        of memory: the man who built the bridge of record, so that both worlds could
+        remember truly what God had done.</p>
+      </div>
+      <div class="card">
+        <img src="../images/ball.jpg" alt="Portrait of Dyer Ball">
+        <h3>Dyer Ball</h3>
+        <p class="meta">1796–1866 · West Boylston, Massachusetts</p>
+        <p>Twenty-eight years of quiet, steady service across the treaty-port arc of South
+        China — Singapore, Macao, Hong Kong, Canton. No single famous deed; instead, the
+        long obedience of a plodder whose footprints mark four ports. His bridge was
+        faithful presence: not every bridge is a marvel of engineering. Some are simply
+        crossed, every day, for twenty-eight years.</p>
+      </div>
+      <div class="card">
+        <img src="../images/doolittle.jpg" alt="Justus Doolittle with his family">
+        <h3>Justus Doolittle</h3>
+        <p class="meta">1824–1880 · Rutland, New York</p>
+        <p>Fourteen years in Foochow (1850–1864), and out of them came <em>Social Life of
+        the Chinese</em> (1865) — a minutely observed record of nineteenth-century
+        Chinese folk society, street by street, festival by festival, still in print
+        today. While others bridged nations and institutions, Doolittle bridged the
+        smallest distance of all: he let the West see China not as an empire or a mission
+        field, but as neighbors — people at work, at worship, at the dinner table.</p>
+      </div>
+    </div>
+  </section>
+  <div class="goldrule"></div>
+  <section>
+    <p class="lede" style="font-style:italic">Two centuries ago, they crossed the ocean carrying care to China —
+    and built bridges the world still walks on. Today, on King Street in South Windsor,
+    a few miles from the East Windsor of Samuel Robbins Brown's birth, we are building
+    the place where that care comes home: a campus to form caregivers, and to welcome
+    them back.</p>
+    <div style="text-align:center">
+      <a class="btn" href="index.html#support">Become a Supporter</a>
+    </div>
+  </section>
+  <section>
+    <p class="verse">"For where two or three gather in my name, there am I with them."
+      <span class="ref">MATTHEW 18 : 20</span>
+    </p>
+  </section>
+</div>
+<footer>
+  <div class="wrap">
+    Golden Lampstand Association · South Windsor, Connecticut<br>
+    437 &amp; 401 King Street — a ten-acre revival plan<br><br>
+    <a href="https://glsna.org/support-us/" target="_blank" rel="noopener">Support Us↗</a> ·
+    <a href="https://classroom.thegoldenlampstand.org/moodle/" target="_blank" rel="noopener">Global Academy↗</a> ·
+    <a href="../gallery.html">中文版</a>
+  </div>
+</footer>
+</body>
+</html>
